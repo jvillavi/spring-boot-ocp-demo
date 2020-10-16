@@ -1,0 +1,22 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: item-api
+data:
+  application.properties: |-
+    # Database connection config
+    spring.datasource.url=jdbc:mysql://mysql:3306/todo
+
+    spring.datasource.username=todoapp
+
+    spring.datasource.password=redhat123
+    
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    
+    spring.jpa.show-sql=true
+    
+    spring.jpa.hibernate.ddl-auto=update
+    
+    spring.jpa.open-in-view=false
